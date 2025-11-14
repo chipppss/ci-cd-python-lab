@@ -1,3 +1,5 @@
+![CI](https://img.shields.io/github/actions/workflow/status/chipppss/ci-cd-python-lab/ci.yml?branch=main)
+
 # ci-cd-python-lab
 
 A minimal Python package to demonstrate CI/CD with GitHub Actions.
