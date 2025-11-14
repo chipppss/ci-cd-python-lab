@@ -57,8 +57,8 @@ jobs:
       - name: Tests + Coverage
         run: pytest
 
-      - name: Upload coverage.xml
-        uses: actions/upload-artifact@v4
-        with:
-          name: coverage-xml
-          path: ./coverage.xml
+- name: Upload coverage.xml
+  uses: actions/upload-artifact@v4
+  with:
+    name: coverage-xml-${{ matrix.python-version }}
+    path: ./coverage.xml
