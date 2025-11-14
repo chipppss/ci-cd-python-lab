@@ -1,5 +1,6 @@
 import argparse
-from . import add, sub, mul, div
+
+from . import add, div, mul, sub
 
 parser = argparse.ArgumentParser(description="Calc CLI")
 parser.add_argument("op", choices=["add", "sub", "mul", "div"])
