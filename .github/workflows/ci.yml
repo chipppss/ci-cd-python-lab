@@ -18,6 +18,14 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
+      - name: Demo secret use
+        env:
+          TOKEN: ${{ secrets.LAB_DEMO_TOKEN }}
+        run: |
+          if [ -z "$TOKEN" ]; then echo "Missing TOKEN" && exit 1; fi
+          echo "Token length is ${#TOKEN} (not printing it)"
+
+
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
